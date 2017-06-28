@@ -1,0 +1,77 @@
+/* APPLICATION.HTML CSS (NAV) */
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+ 
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-add {
+  color: #FF6961;
+  margin: 10px;
+  background-color: white;
+  border-color: white;
+}
+
+.btn-add:hover {
+  background-color: #FF6961;
+  color: white;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* APPLICATION.HTML CSS (FOOTER) */
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  margin: 0px;
+  text-align: center;
+}
+
+
+/* INDEX CSS */
+
+/*section {*/
+/*  height: 100vh;*/
+/*}*/
+
+.main-content {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-select {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.btn-search {
+  color: #3498DB;
+  margin: 10px;
+  background-color: white;
+  border-color: #3498DB;
+}
+
+.btn-search:hover {
+  background-color: #3498DB;
+  color: white;
+}
+
+.btn-search:focus {
+  outline: none;
+}

@@ -1,0 +1,39 @@
+<style media="screen">
+  @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+</style>
+<%= stylesheet_link_tag  'custom/product', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="search-content">
+        <h1>편의점 찾기</h1>
+        <div class="main-select">  
+            <%= link_to '편의점', {:action => 'p_search'}, class: "btn btn-p-search" %>
+            <%= link_to '음식점', {:action => 'r_search'}, class: "btn btn-search" %>
+        </div>
+          <div class="product-price-search">
+
+            <div class="product-min-max">
+              가격대 : <input type="text" class="min_price" name="min_prcie">
+              ~ <input type="text" class="max_price" name="max_price">
+            </div>
+            <div class="product-search-name">
+              제품명 : <input type="text" class="product_name" name="product_name"  placeholder="이름을 입력해 주세요 ex).우유">
+            </div>
+            <div class="sendBt">
+              <button class="sendDataBt" type="button" name="button">검 색!</button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="row">
+  <div class="product-infos container-fluid"></div>
+</div>
+
+<% content_for :bottom do %>
+  <%= javascript_include_tag 'custom/main/productSearch', 'data-turbolinks-track' => true %>
+<% end %>

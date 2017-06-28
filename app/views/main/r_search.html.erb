@@ -1,0 +1,46 @@
+<style media="screen">
+  img{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100px;
+    height: 100px;
+  }
+  
+  @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+  
+  
+</style>
+<%= stylesheet_link_tag  'custom/resta', media: 'all', 'data-turbolinks-track': 'reload' %>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="search-content">
+        <h1>음식점찾기</h1>
+        <div class="main-select">  
+          <%= link_to '편의점', {:action => 'p_search'}, class: "btn btn-search" %>
+          <%= link_to '음식점', {:action => 'r_search'}, class: "btn btn-r-search" %>
+        </div>
+        <div class="restaurant-price-search">
+          <div class="restaurant-min-max">
+            가격대 : <input type="text" class="min_price" name="min_prcie"> ~ <input type="text" class="max_price" name="max_price">
+          </div>
+          <div class="restaurant-search-location">
+            지역명 : <input type="text" class="location_val" name="location">
+          </div>
+          <div class="sendBt">
+            <button class="sendDataBt" type="button" name="button">검 색!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="row">
+  <div class="restaurant-infos">
+    
+  </div>
+</div>
+
+<% content_for :bottom do %>
+<%= javascript_include_tag 'custom/main/resSearch', 'data-turbolinks-track' => true %>
+<% end %>

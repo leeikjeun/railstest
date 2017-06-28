@@ -1,0 +1,57 @@
+<style media="screen">
+  *{
+    box-sizing: border-box;
+  }
+  
+  table{
+    width: 960px;
+    margin: 0 auto;
+    padding: 0px;
+  }
+
+  th{
+    width: 240px;
+    height: 100px;
+  }
+
+  td{
+    width: 240px;
+    height: 100px;
+    text-align: center;
+  }
+
+  img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+</style>
+<h1>레스토랑 보기</h1>
+<%= link_to 'add restaulantInfo', {:action => 'new'} , class: "btn btn-default"%>
+<%= link_to 'add product', {:action => 'newProduct'}, class: "btn btn-default"%>
+<%= link_to 'list product', {:action => 'productlist'}, class: "btn btn-default" %>
+<table>
+  <thead>
+     <tr>
+        <th>이름</th>
+        <th>이미지</th>
+        <th>지역</th>
+        <th>전화번호</th>
+        <th>메뉴추가하기</th>
+     </tr>
+  </thead>
+  <tbody>
+  <% @restaulantInfo.each do |info| %>
+  <tr>
+    <td><%= info.name %></td>
+    <td><img src="<%= info.img_url %>" alt=""></td>
+    <td><%= info.location %></td>
+    <td><%= info.phone %></td>
+    <td><%= link_to 'addMenu', {:action => 'addMenu', id: info.id} %>
+      <%= link_to 'showMenu', {:action => 'showmenu', id: info.id} %>
+    </td>
+  </tr>
+
+  <% end %>
+  </tbody>
+</table>

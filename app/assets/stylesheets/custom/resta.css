@@ -1,0 +1,127 @@
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/* R_SEARCH CSS */
+
+.search-content {
+  font-family: 'Nanum Gothic', serif;
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-select {
+  display: flex;
+  justify-content: center;
+  font-family: 'PT Sans', sans-serif;
+  margin-bottom: 15px;
+}
+
+.btn-r-search{
+  color: #FFFFFF;
+  margin: 10px;
+  background-color: #3498DB;
+  border-color: #3498DB;
+}
+
+.restaurant-price-search {
+  display: flex;
+  flex-direction: column;  
+  background-color: #E0E0E0;
+  height: 170px;
+  border-radius: 10px;
+  width: 500px;
+}
+
+.restaurant-min-max {
+  font-size: 18px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  padding-top: 30px; 
+}
+
+.min_price,
+.max_price {
+    width: 160px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: #CDCDCD;
+}
+
+.restaurant-search-location {
+  font-size: 18px;
+  margin-left: 40px;
+}
+
+.location_val {
+  width: 300px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: #CDCDCD;
+}
+
+.sendBt {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.sendDataBt {
+  height: 30px;
+  width: 100px;
+  margin-top: 20px;
+  margin-left: 40px;
+  background-color: white;
+  border-color: #3498DB;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+}
+
+.sendDataBt:hover {
+  background-color: #00ace6;
+  color: white;
+}
+
+h1 {
+  font-family: 'Nanum Gothic', serif;
+}
+
+.restaurant-infos {
+  font-family: 'Nanum Gothic', serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+  flex-wrap: wrap;
+}
+
+.restaurant-infos::after{
+    content : "";
+    display: block;
+    clear: both;
+}
+
+.data-size{
+  display : flex;
+  justify-content: center;
+}
+
+
+dl {
+  display: flex;
+  text-align: center;
+}
+
+
+img {
+  width: 200px;
+  height: 200px;
+  margin-top: 80px;
+}
+

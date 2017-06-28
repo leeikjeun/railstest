@@ -1,0 +1,12 @@
+<h1>add menu</h1>
+
+<%= form_for @menu, url: {action: "menuCreate" }, html: { multipart: true } do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+  <%= f.label :key %>
+  <%= f.text_field :key, value: @key %>
+
+  <%= f.submit "Save", class: "btn btn-primary" %>
+<% end %>

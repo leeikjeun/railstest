@@ -1,0 +1,17 @@
+<h1>메뉴리스트</h1>
+<table>
+  <thead>
+     <tr>
+        <th>이름</th>
+        <th>가격</th>
+     </tr>
+  </thead>
+  <tbody>
+    <% @menus.each do |menu| %>
+    <tr>
+      <td><%= menu.name %></td>
+      <td><%= menu.price %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

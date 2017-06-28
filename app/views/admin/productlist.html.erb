@@ -1,0 +1,47 @@
+<style media="screen">
+  *{
+    box-sizing: border-box;
+  }
+  table{
+    width: 960px;
+    margin: 0 auto;
+    padding: 0px;
+  }
+  th{
+    width: 240px;
+    height: 100px;
+  }
+
+  td{
+    width: 240px;
+    height: 100px;
+    text-align: center;
+  }
+
+  img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+</style>
+<table>
+  <thead>
+     <tr>
+        <th>이름</th>
+        <th>이미지</th>
+        <th>가격</th>
+        <th>편의점 포함</th>
+     </tr>
+  </thead>
+  <tbody>
+  <% @productInfo.each do |info| %>
+  <tr>
+    <td><%= info.name %></td>
+    <td><img src="<%= info.img_url %>" alt=""></td>
+    <td><%= info.price %></td>
+    <td>cu :<%= info.rogoCU %> <br /> gs : <%= info.rogoGS %> <br /> seven : <%= info.rogoSeven %></td>
+  </tr>
+
+  <% end %>
+  </tbody>
+</table>

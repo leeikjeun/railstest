@@ -1,0 +1,17 @@
+<h1>상품정보 등록</h1>
+
+<%= form_for @productInfo, url: {action: "createProduct"}, html: { multipart: true } do |f| %>
+   <%= f.label :name %>
+   <%= f.text_field :name %>
+   <%= f.label :img %>
+   <%= f.file_field :img %>
+   <%= f.label :price %>
+   <%= f.text_field :price %>
+   <%= f.label :rogoCU %>
+   <%= f.check_box :rogoCU %>
+   <%= f.label :rogoGS %>
+   <%= f.check_box :rogoGS %>
+   <%= f.label :rogoSeven %>
+   <%= f.check_box :rogoSeven %>
+   <%= f.submit "Save", class: "btn btn-primary" %>
+<% end %>

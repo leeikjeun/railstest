@@ -1,0 +1,21 @@
+<h1>새로운 글을 작성할 페이지</h1>
+
+<%= form_for @restaulantInfo, url: {action: "create"}, html: { multipart: true } do |f| %>
+   <%= f.label :name %>
+   <%= f.text_field :name %>
+   <%= f.label :img %>
+   <%= f.file_field :img %>
+   <%= f.label :location %>
+   <%= f.text_field :location %>
+   <%= f.label :address %>
+   <%= f.text_field :address %>
+   <%= f.label :phone %>
+   <%= f.text_field :phone %>
+   <%= f.label :business_hours %>
+   <%= f.text_field :business_hours %>
+   <%= f.label :between_price_min %>
+   <%= f.text_field :between_price_min %>
+   <%= f.label :between_price_max %>
+   <%= f.text_field :between_price_max %>
+   <%= f.submit "Save", class: "btn btn-primary" %>
+<% end %>
